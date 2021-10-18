@@ -10,6 +10,7 @@
 		E969AA1C2717950D00580944 /* KorotaevKN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969AA1B2717950D00580944 /* KorotaevKN.swift */; };
 		E969AA1E27179E9100580944 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969AA1D27179E9100580944 /* PersonViewController.swift */; };
 		E9A9B672271DB79A00110EE6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9B671271DB79A00110EE6 /* ImageViewController.swift */; };
+		E9A9B675271E369100110EE6 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9B674271E369100110EE6 /* Extension + UIView.swift */; };
 		E9D42847270C8EF1006AF890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D42846270C8EF1006AF890 /* AppDelegate.swift */; };
 		E9D42849270C8EF1006AF890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D42848270C8EF1006AF890 /* SceneDelegate.swift */; };
 		E9D4284B270C8EF1006AF890 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D4284A270C8EF1006AF890 /* LoginViewController.swift */; };
@@ -23,6 +24,7 @@
 		E969AA1B2717950D00580944 /* KorotaevKN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorotaevKN.swift; sourceTree = "<group>"; };
 		E969AA1D27179E9100580944 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		E9A9B671271DB79A00110EE6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		E9A9B674271E369100110EE6 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		E9D42843270C8EF1006AF890 /* LoginScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D42846270C8EF1006AF890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D42848270C8EF1006AF890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9A9B673271E365600110EE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9A9B674271E369100110EE6 /* Extension + UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E9D4283A270C8EF1006AF890 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				E9D76E962713B30C0025A18A /* Models */,
-				E9D76E992713B3750025A18A /* SupportFiles */,
 				E9D76E952713B2EB0025A18A /* ViewControllers */,
 				E9D76E972713B3220025A18A /* Storyboards */,
+				E9A9B673271E365600110EE6 /* Extensions */,
+				E9D76E992713B3750025A18A /* SupportFiles */,
 				E9D76E982713B3550025A18A /* Resourses */,
 			);
 			path = LoginScreen;
@@ -194,6 +205,7 @@
 				E969AA1E27179E9100580944 /* PersonViewController.swift in Sources */,
 				E9D4285B270CDE6A006AF890 /* WelcomeViewController.swift in Sources */,
 				E9A9B672271DB79A00110EE6 /* ImageViewController.swift in Sources */,
+				E9A9B675271E369100110EE6 /* Extension + UIView.swift in Sources */,
 				E969AA1C2717950D00580944 /* KorotaevKN.swift in Sources */,
 				E9D42847270C8EF1006AF890 /* AppDelegate.swift in Sources */,
 				E9D42849270C8EF1006AF890 /* SceneDelegate.swift in Sources */,

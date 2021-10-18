@@ -14,18 +14,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     //MARK: - Private properties
-    private var user = "User"
-    private var password = "Password"
+    private var user = User.getUserData()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let personVC = navigationVC.topViewController as! PersonViewController
+                personVC.user = user
+            }
+        }
     }
     
     // MARK: - IBActions
     @IBAction func logInButtonPressed() {
-        if userNameTF.text != "User" || passwordTF.text != password {
+        if userNameTF.text != user.login || passwordTF.text != user.password {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
@@ -37,8 +45,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user) 😉")
-        : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.login) 😉")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -72,6 +80,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTF.becomeFirstResponder()
         } else {
             logInButtonPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
     }
