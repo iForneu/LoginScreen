@@ -218,9 +218,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KorotaevPersonImageSet" translatesAutoresizingMaskIntoConstraints="NO" id="8mu-W3-6Xi">
                                 <rect key="frame" x="164" y="74" width="140" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="00A-lj-jy6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="00A-lj-jy6"/>
                                     <constraint firstAttribute="width" secondItem="8mu-W3-6Xi" secondAttribute="height" multiplier="1:1" id="95P-6w-J7m"/>
-                                    <constraint firstAttribute="height" constant="140" id="RAM-DL-obK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="RAM-DL-obK"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -245,38 +245,84 @@
             </objects>
             <point key="canvasLocation" x="1425" y="779.57746478873241"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="Jj6-0C-FHD">
             <objects>
-                <viewController id="VFx-vp-eUC" sceneMemberID="viewController">
+                <viewController id="VFx-vp-eUC" customClass="ImageViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lm2-oq-dM3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-rm-cxU">
-                                <rect key="frame" x="142.5" y="74" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykl-IK-D5a">
+                                <rect key="frame" x="136.5" y="59" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-7Z-ILA">
-                                <rect key="frame" x="16" y="125" width="288" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My social networks:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-0n-8UW">
+                                <rect key="frame" x="85" y="95" width="150" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK: vk.com/forneu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-Hg-AhD">
+                                <rect key="frame" x="90" y="130.5" width="140" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telegram: @iForneu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty2-MS-D8g">
+                                <rect key="frame" x="84" y="158.5" width="152" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inst: korotaevkirill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-wa-qOH">
+                                <rect key="frame" x="93.5" y="187" width="133" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KorotaevKN1PersonImageSet" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-1r-dTs">
+                                <rect key="frame" x="71" y="223" width="178" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="290" id="8T1-pC-Yu7"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="429" id="s72-E5-A8J"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1w6-xg-pfL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FdS-7Z-ILA" firstAttribute="top" secondItem="8cP-rm-cxU" secondAttribute="bottom" constant="30" id="9en-Dv-Wzm"/>
-                            <constraint firstItem="1w6-xg-pfL" firstAttribute="trailing" secondItem="FdS-7Z-ILA" secondAttribute="trailing" constant="16" id="CBu-mT-LtU"/>
-                            <constraint firstItem="8cP-rm-cxU" firstAttribute="top" secondItem="1w6-xg-pfL" secondAttribute="top" constant="30" id="Htm-Sx-ucm"/>
-                            <constraint firstItem="8cP-rm-cxU" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="XHZ-Cf-9Eh"/>
-                            <constraint firstItem="FdS-7Z-ILA" firstAttribute="leading" secondItem="1w6-xg-pfL" secondAttribute="leading" constant="16" id="kfZ-AW-BEA"/>
+                            <constraint firstItem="Ty2-MS-D8g" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="2gh-aL-xcA"/>
+                            <constraint firstItem="ykl-IK-D5a" firstAttribute="top" secondItem="1w6-xg-pfL" secondAttribute="top" constant="15" id="4ej-5g-ZdM"/>
+                            <constraint firstItem="Pni-wa-qOH" firstAttribute="top" secondItem="Ty2-MS-D8g" secondAttribute="bottom" constant="7.5" id="7ET-uI-i61"/>
+                            <constraint firstItem="MZc-0n-8UW" firstAttribute="top" secondItem="ykl-IK-D5a" secondAttribute="bottom" constant="15" id="Dzc-Am-Lzd"/>
+                            <constraint firstItem="e4t-Hg-AhD" firstAttribute="top" secondItem="MZc-0n-8UW" secondAttribute="bottom" constant="15" id="Qij-FU-fc6"/>
+                            <constraint firstItem="fFm-1r-dTs" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="Wjj-FK-om2"/>
+                            <constraint firstItem="Ty2-MS-D8g" firstAttribute="top" secondItem="e4t-Hg-AhD" secondAttribute="bottom" constant="7.5" id="XDY-Ka-jTZ"/>
+                            <constraint firstItem="fFm-1r-dTs" firstAttribute="width" secondItem="Lm2-oq-dM3" secondAttribute="height" multiplier="145:463" id="aIc-Ve-mkq"/>
+                            <constraint firstItem="MZc-0n-8UW" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="bLm-6W-368"/>
+                            <constraint firstItem="fFm-1r-dTs" firstAttribute="width" secondItem="fFm-1r-dTs" secondAttribute="height" multiplier="290:429" id="eNi-Ix-Vr6"/>
+                            <constraint firstItem="Pni-wa-qOH" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="lVi-sp-VWf"/>
+                            <constraint firstItem="ykl-IK-D5a" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="rdU-jw-eBP"/>
+                            <constraint firstItem="e4t-Hg-AhD" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="sOt-3C-99d"/>
+                            <constraint firstItem="fFm-1r-dTs" firstAttribute="top" secondItem="Pni-wa-qOH" secondAttribute="bottom" constant="15" id="thE-N9-zBo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Fh-Et-O9L"/>
+                    <connections>
+                        <outlet property="korotaeKN1ImageView" destination="fFm-1r-dTs" id="7s5-bQ-2YV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iK7-f7-U4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +334,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="44r-Ga-d9F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s9m-Vj-dTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -321,6 +368,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="KorotaevKN1PersonImageSet" width="714.5" height="1080"/>
         <image name="KorotaevPersonImageSet" width="950" height="950"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
