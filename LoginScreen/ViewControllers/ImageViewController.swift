@@ -35,6 +35,25 @@ class ImageViewController: UIViewController {
         korotaeKN1ImageView.image = UIImage(named: user.person.secondImage)
     }
     
+    // MARK: - IB Actions
+    @IBAction func vkButtonPressed() {
+        if let vkURL = URL(string: user.person.vkURL) {
+            UIApplication.shared.open(vkURL)
+        }
+    }
+    
+    @IBAction func instButtonPressed() {
+        if let instURL = URL(string: user.person.instURL) {
+            UIApplication.shared.open(instURL)
+        }
+    }
+    
+    @IBAction func telegramButtonPressed() {
+        if let telegramURL = URL(string: user.person.telegramURL) {
+            UIApplication.shared.open(telegramURL)
+        }
+    }
+    
     // MARK: - viewDidLayoutSubviews
     override func viewDidLayoutSubviews() {
         korotaeKN1ImageView.layer.cornerRadius = korotaeKN1ImageView.frame.height / 2

@@ -253,50 +253,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykl-IK-D5a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykl-IK-D5a">
                                 <rect key="frame" x="191" y="103" width="46.333333333333343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g5U-aU-e4b">
-                                <rect key="frame" x="138" y="518" width="152" height="111.33333333333337"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My social networks:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-0n-8UW">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK: vk.com/forneu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-Hg-AhD">
-                                        <rect key="frame" x="0.0" y="30.333333333333371" width="152" height="20.333333333333329"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
-                                        </accessibility>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telegram: @iForneu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty2-MS-D8g">
-                                        <rect key="frame" x="0.0" y="60.666666666666636" width="152" height="20.333333333333336"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
-                                        </accessibility>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inst: korotaevkirill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-wa-qOH">
-                                        <rect key="frame" x="0.0" y="91" width="152" height="20.333333333333329"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
-                                        </accessibility>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-1r-dTs">
                                 <rect key="frame" x="49" y="158" width="330" height="330"/>
                                 <constraints>
@@ -305,17 +267,55 @@
                                     <constraint firstAttribute="width" secondItem="fFm-1r-dTs" secondAttribute="height" multiplier="1:1" id="mrJ-84-JEf"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-7D-MD2">
+                                <rect key="frame" x="100" y="555.33333333333337" width="228" height="109"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-xN-AQn">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="VK"/>
+                                        <connections>
+                                            <action selector="vkButtonPressed" destination="VFx-vp-eUC" eventType="touchUpInside" id="ls8-Vc-8sT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xP-g5-Rau">
+                                        <rect key="frame" x="0.0" y="39" width="228" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Instagram"/>
+                                        <connections>
+                                            <action selector="instButtonPressed" destination="VFx-vp-eUC" eventType="touchUpInside" id="htT-p5-xIO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enH-mN-kNN">
+                                        <rect key="frame" x="0.0" y="78" width="228" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Telegram"/>
+                                        <connections>
+                                            <action selector="telegramButtonPressed" destination="VFx-vp-eUC" eventType="touchUpInside" id="qm2-PW-cw7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My social networks:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-0n-8UW">
+                                <rect key="frame" x="139" y="513" width="150" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1w6-xg-pfL"/>
                         <color key="backgroundColor" red="0.36272709219999999" green="0.93336601539999997" blue="0.8729385181" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fFm-1r-dTs" firstAttribute="width" secondItem="Lm2-oq-dM3" secondAttribute="height" multiplier="165:463" id="2jZ-m0-zm5"/>
-                            <constraint firstItem="ykl-IK-D5a" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="Q0G-cw-1mj"/>
                             <constraint firstItem="fFm-1r-dTs" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="RQQ-9w-LNn"/>
-                            <constraint firstItem="g5U-aU-e4b" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="TkU-sJ-HDn"/>
                             <constraint firstItem="fFm-1r-dTs" firstAttribute="top" secondItem="ykl-IK-D5a" secondAttribute="bottom" constant="34.666666666666671" id="WJX-dY-FAu"/>
+                            <constraint firstItem="MZc-0n-8UW" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="WVX-gG-Gmh"/>
+                            <constraint firstItem="LEE-7D-MD2" firstAttribute="leading" secondItem="1w6-xg-pfL" secondAttribute="leading" constant="100" id="XR0-jK-kLl"/>
+                            <constraint firstItem="MZc-0n-8UW" firstAttribute="top" secondItem="fFm-1r-dTs" secondAttribute="bottom" constant="25" id="bqx-Rl-Fuo"/>
+                            <constraint firstItem="LEE-7D-MD2" firstAttribute="top" secondItem="MZc-0n-8UW" secondAttribute="bottom" constant="22" id="h4o-F5-hjz"/>
+                            <constraint firstItem="1w6-xg-pfL" firstAttribute="trailing" secondItem="LEE-7D-MD2" secondAttribute="trailing" constant="100" id="hwA-dY-YnZ"/>
                             <constraint firstItem="ykl-IK-D5a" firstAttribute="top" secondItem="1w6-xg-pfL" secondAttribute="top" constant="15" id="nZ0-Pb-XVr"/>
-                            <constraint firstItem="g5U-aU-e4b" firstAttribute="top" secondItem="fFm-1r-dTs" secondAttribute="bottom" constant="30" id="z2I-f8-nb0"/>
+                            <constraint firstItem="ykl-IK-D5a" firstAttribute="centerX" secondItem="Lm2-oq-dM3" secondAttribute="centerX" id="wCA-YW-wao"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Fh-Et-O9L"/>
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iK7-f7-U4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378.9719626168221" y="878.61771058315344"/>
+            <point key="canvasLocation" x="2376.1682242990651" y="877.32181425485965"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yxo-m1-ept">

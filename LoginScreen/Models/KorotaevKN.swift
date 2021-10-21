@@ -25,12 +25,21 @@ struct Person {
     let surname: String
     let firstImage: String
     let secondImage: String
+    let vkURL : String
+    let instURL: String
+    let telegramURL: String
     
     var fullname: String {
         "\(name) \(surname)"
     }
     
     static func getPerson() -> Person {
-        Person(name: "Kirill", surname: "Korotaev", firstImage: "KorotaevKN", secondImage: "KorotaevKN1")
+        Person(name: "Kirill",
+               surname: "Korotaev",
+               firstImage: "KorotaevKN",
+               secondImage: "KorotaevKN1",
+               vkURL: "https://vk.com/forneu",
+               instURL: "https://instagram.com/korotaevkirill",
+               telegramURL: "https://t.me/iForneu")
     }
 }
